@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="307.0" prefWidth="514.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.GUI.AffecterFamilleController">
+   <children>
+      <Label layoutX="335.0" layoutY="204.0" text="Veuillez choisir les emplacemets  à reserver par famille" />
+      <Label layoutX="335.0" layoutY="246.0" text="Famille" />
+      <Label layoutX="335.0" layoutY="290.0" prefHeight="17.0" prefWidth="31.0" text="Allée" />
+      <Label layoutX="339.0" layoutY="337.0" text="Nombre de travees  à reserver " />
+      <ComboBox fx:id="comboFam" layoutX="550.0" layoutY="241.0" prefWidth="150.0" />
+      <ComboBox fx:id="comboAllee" layoutX="550.0" layoutY="285.0" onAction="#fillTrav" prefWidth="150.0" />
+      <Label fx:id="msg" layoutX="339.0" layoutY="384.0" text="Message" />
+      <Button fx:id="update" layoutX="591.0" layoutY="401.0" mnemonicParsing="false" onAction="#updateemp" text="Affecter" />
+      <TextField fx:id="txtTrav" editable="false" layoutX="550.0" layoutY="332.0" prefHeight="27.0" prefWidth="150.0" />
+      <AnchorPane prefHeight="700.0" prefWidth="138.0" style="-fx-background-color: #047178;">
+         <children>
+            <Button layoutX="3.0" layoutY="337.0" mnemonicParsing="false" opacity="0.38" prefHeight="87.0" prefWidth="142.0" />
+            <Button fx:id="btnRetour" layoutX="3.0" layoutY="242.0" mnemonicParsing="false" opacity="0.4" prefHeight="87.0" prefWidth="142.0" textFill="#f5f5f5" />
+            <Button layoutX="2.0" layoutY="431.0" mnemonicParsing="false" opacity="0.38" prefHeight="87.0" prefWidth="142.0" />
+            <Button fx:id="btnRetour1" layoutX="3.0" layoutY="148.0" mnemonicParsing="false" opacity="0.4" prefHeight="87.0" prefWidth="142.0" textFill="#f5f5f5" />
+         </children>
+      </AnchorPane>
+      <Pane layoutX="131.0" layoutY="27.0" prefHeight="78.0" prefWidth="839.0" style="-fx-background-color: #189fa5;">
+         <children>
+            <Text fill="WHITE" layoutX="198.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion des familles">
+               <font>
+                  <Font name="System Bold Italic" size="34.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="49.0" fitWidth="37.0" layoutX="14.0" layoutY="21.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../com/esprit/images/87385813_238681270473271_6329384160406274048_n.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Button fx:id="btnAffFamille" layoutX="146.0" layoutY="105.0" mnemonicParsing="false" onAction="#AffEmpParFamille" prefHeight="45.0" prefWidth="824.0" text="Affichage par famille" />
+      <TableView fx:id="tab" layoutX="334.0" layoutY="460.0" prefHeight="200.0" prefWidth="385.0">
+        <columns>
+          <TableColumn fx:id="colEmp" prefWidth="136.0" text="Emplacements" />
+          <TableColumn fx:id="colIntit" prefWidth="248.0" text="Intitule" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

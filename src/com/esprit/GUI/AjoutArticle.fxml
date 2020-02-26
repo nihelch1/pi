@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="587.0" prefWidth="828.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.GUI.AjoutArticleController">
+   <children>
+      <TextField fx:id="txtRef" layoutX="301.0" layoutY="168.0" />
+      <Label id="ref" layoutX="214.0" layoutY="172.0" text="Référence" />
+      <Label id="ref" fx:id="unite" layoutX="584.0" layoutY="303.0" text="Unité" />
+      <Label id="ref" fx:id="prix_vente" layoutX="207.0" layoutY="303.0" text="Prix de vente" />
+      <Label id="ref" fx:id="prix_achat" layoutX="564.0" layoutY="234.0" text="Prix d'achat" />
+      <Label id="ref" fx:id="des" layoutX="563.0" layoutY="172.0" text="Désignation" />
+      <Label id="ref" fx:id="code" layoutX="204.0" layoutY="234.0" text="Code à barres" />
+      <Label id="ref" fx:id="famille" layoutX="580.0" layoutY="427.0" text="Famille" />
+      <Label id="ref" fx:id="four" layoutX="207.0" layoutY="427.0" text="Fournisseur" />
+      <TextField fx:id="txtVente" layoutX="302.0" layoutY="299.0" />
+      <TextField fx:id="txtAchat" layoutX="672.0" layoutY="230.0" />
+      <TextField fx:id="txtCode" layoutX="301.0" layoutY="230.0" />
+      <TextField fx:id="txtDes" layoutX="672.0" layoutY="168.0" />
+      <TextField fx:id="txtUnite" layoutX="672.0" layoutY="299.0" />
+      <ComboBox fx:id="combof" layoutX="672.0" layoutY="423.0" prefWidth="150.0" />
+      <TextField fx:id="min" layoutX="302.0" layoutY="360.0" />
+      <Label layoutX="198.0" layoutY="364.0" text="Seuil minimum" />
+      <TextField fx:id="max" layoutX="672.0" layoutY="360.0" />
+      <Label layoutX="564.0" layoutY="364.0" text="Seuil maximum" />
+      <AnchorPane prefHeight="700.0" prefWidth="138.0" style="-fx-background-color: #047178;">
+         <children>
+            <Button fx:id="gestion_art" layoutY="150.0" mnemonicParsing="false" onAction="#gestionArticle" opacity="0.57" prefHeight="58.0" prefWidth="147.0" text="Gestion des articles" />
+            <Button fx:id="gestion_stock" layoutY="238.0" mnemonicParsing="false" onAction="#gestionStock" opacity="0.57" prefHeight="58.0" prefWidth="147.0" text="Gestion de stock" />
+         </children></AnchorPane>
+      <Button id="btn" layoutX="452.0" layoutY="533.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="38.0" prefWidth="131.0" style="-fx-background-color: #189FA5;" text="Ajouter Article" />
+      <ComboBox fx:id="comboFour" layoutX="302.0" layoutY="423.0" prefWidth="150.0" />
+      <AnchorPane layoutX="131.0" layoutY="27.0" prefHeight="78.0" prefWidth="829.0" style="-fx-background-color: #189fA5;">
+         <children>
+            <Label layoutX="290.0" layoutY="20.0" text="Ajouter article" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnliste" layoutX="146.0" layoutY="105.0" mnemonicParsing="false" onAction="#afficherListe" prefHeight="38.0" prefWidth="813.0" text="Afficher la liste des articles" />
+   </children>
+</AnchorPane>

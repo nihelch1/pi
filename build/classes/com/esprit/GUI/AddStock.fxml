@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="661.0" prefWidth="835.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.GUI.AddStockController">
+   <children>
+      <Label layoutX="608.0" layoutY="431.0" text="Quantite:" />
+      <Label fx:id="labelDate" layoutX="290.0" layoutY="523.0" text="Date d'expiration:" />
+      <TextField fx:id="txtqte" layoutX="706.0" layoutY="426.0" prefHeight="27.0" prefWidth="109.0" />
+      <ComboBox fx:id="combo" layoutX="442.0" layoutY="474.0" prefWidth="150.0" />
+      <Label layoutX="290.0" layoutY="479.0" text="Reference article:" />
+      <TableView fx:id="tableStock" layoutX="281.0" layoutY="194.0" prefHeight="208.0" prefWidth="534.0">
+        <columns>
+          <TableColumn fx:id="numero" prefWidth="131.0" text="Numero de palette" />
+          <TableColumn fx:id="qte" text="Quantite" />
+            <TableColumn fx:id="date" prefWidth="139.0" text="Date d'expiration" />
+            <TableColumn fx:id="cellArticle" text="Article" />
+            <TableColumn fx:id="cellEmp" prefWidth="103.0" text="Emplacement" />
+        </columns>
+      </TableView>
+      <DatePicker fx:id="dateE" layoutX="442.0" layoutY="518.0" prefHeight="27.0" prefWidth="150.0" />
+      <TextField fx:id="search" layoutX="319.0" layoutY="155.0" prefHeight="27.0" prefWidth="481.0" promptText="search" text="chercher palette ..." />
+      <Label layoutX="608.0" layoutY="479.0" text="Emplacement:" />
+      <ComboBox fx:id="comboEmp" layoutX="706.0" layoutY="474.0" prefHeight="27.0" prefWidth="109.0" />
+      <Label layoutX="376.0" layoutY="48.0" text="Gestion des palettes">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="834.0" layoutY="319.0" onMouseClicked="#delete" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@delete.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="68.0" fitWidth="28.0" layoutX="834.0" layoutY="270.0" onMouseClicked="#edit" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@document.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="290.0" layoutY="431.0" prefHeight="17.0" prefWidth="124.0" text="numero de palette:" />
+      <TextField fx:id="txtC" layoutX="439.0" layoutY="426.0" prefHeight="27.0" prefWidth="150.0" />
+      <AnchorPane prefHeight="700.0" prefWidth="138.0" style="-fx-background-color: #047178;">
+         <children>
+            <Button fx:id="btnGR" layoutY="150.0" mnemonicParsing="false" onAction="#AfficherMenu" opacity="0.57" prefHeight="58.0" prefWidth="147.0" text="Gestion  reception" />
+         </children>
+      </AnchorPane>
+      <Pane layoutX="131.0" layoutY="27.0" prefHeight="78.0" prefWidth="830.0" style="-fx-background-color: #189fA5 #189fA5;">
+         <children>
+            <Label layoutX="260.0" layoutY="24.0" text="Suivie des commandes" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="78.0" fitWidth="36.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#Back" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@return.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

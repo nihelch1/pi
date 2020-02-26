@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="587.0" prefWidth="828.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.GUI.AfficherArticleController">
+   <children>
+      <TableView fx:id="table" layoutX="149.0" layoutY="199.0" prefHeight="311.0" prefWidth="751.0">
+         <columns>
+            <TableColumn fx:id="Réf" prefWidth="81.0" text="Référence" />
+            <TableColumn fx:id="Dés" prefWidth="162.0" text="Désignation" />
+            <TableColumn fx:id="Code" prefWidth="116.0" text="Code" />
+            <TableColumn fx:id="Prix_a" prefWidth="77.0" text="Prix achat" />
+            <TableColumn fx:id="Prix_v" prefWidth="79.0" text="Prix vente" />
+            <TableColumn fx:id="Unité" prefWidth="58.0" text="Unité" />
+            <TableColumn fx:id="Fournisseur" prefWidth="88.0" text="Fournisseur" />
+            <TableColumn fx:id="Famille" prefWidth="104.0" text="Famille" />
+         </columns>
+      </TableView>
+      <AnchorPane prefHeight="700.0" prefWidth="138.0" style="-fx-background-color: #047178;" />
+      <AnchorPane layoutX="130.0" layoutY="41.0" prefHeight="78.0" prefWidth="829.0" style="-fx-background-color: #189fA5;">
+         <children>
+            <Label layoutX="290.0" layoutY="20.0" text="Liste des articles" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Button layoutX="22.0" layoutY="27.0" mnemonicParsing="false" onAction="#backToAjout" text="Back" />
+         </children>
+      </AnchorPane>
+      <TextField fx:id="filterField" layoutX="166.0" layoutY="151.0" prefHeight="25.0" prefWidth="241.0" promptText="Chercher..." />
+      <Button fx:id="btndelete" layoutX="545.0" layoutY="527.0" mnemonicParsing="false" onAction="#delete" style="-fx-background-color: #189FA5;" text="Supprimer" />
+      <Button layoutX="438.0" layoutY="527.0" mnemonicParsing="false" onMouseClicked="#modifier" style="-fx-background-color: #189fA5;" text="Modifier" />
+   </children>
+</AnchorPane>
